@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ArtistDetail.scss";
 import CoverArt from "./CoverArt";
+import Genre from "./Genre";
 
 export default function ArtistDetail() {
   const [artist, setArtist] = useState();
@@ -25,6 +26,7 @@ export default function ArtistDetail() {
       {artist ? (
         <div className="detail-info">
           <h1 className="title">{artist.name}</h1>
+          <Genre id={id} />
           <div className="releases">
             <h1 className="title-releases">Releases</h1>
             {artist.releases.map((release) => {

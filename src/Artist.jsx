@@ -1,9 +1,10 @@
 import './Artist.scss'
+import Genre from './Genre'
 
 export default function Artist({ artists }) {
     return (
         <div className="artists">
-            { artists.map((artist) => {
+            {artists.map((artist) => {
                 return (
                     <a href={`/artist/${artist.id}`} className="artist-card" key={artist.id}>
                         {/* <div className="avatar"></div> */}
@@ -15,6 +16,7 @@ export default function Artist({ artists }) {
                                 Aliases: {artist.aliases.map(alias => alias.name).join(", ")}
                             </div>
                         )}
+                        <Genre id={artist.id} />
                     </a>
                 )
             }
