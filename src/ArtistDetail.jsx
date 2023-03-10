@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoverArt from './CoverArt'
+import "./ArtistDetail.scss";
+import CoverArt from "./CoverArt";
 
 export default function ArtistDetail() {
   const [artist, setArtist] = useState();
@@ -22,22 +23,25 @@ export default function ArtistDetail() {
   return (
     <div className="detail-container">
       {artist ? (
-        <>
-          <h1>{artist.name}</h1>
-          <h2>Releases</h2>
-          {artist.releases.map((release) => {
-            console.log(release);
-            return (
-              <>
-                <p>
-                  <strong>{release.title}</strong>, {release.date},{" "}
-                  {release.country}
-                </p>
-                <CoverArt id={release.id}/>
-              </>
-            );
-          })}
-        </>
+        <div className="detail-info">
+          <h1 className="title">{artist.name}</h1>
+          <div className="releases">
+            <h1 className="title-releases">Releases</h1>
+            {artist.releases.map((release) => {
+              console.log(release);
+              return (
+                <>
+                  <h2>{release.title}</h2>
+                  <p>
+                    Release date :{release.date}, {release.country}
+                  </p>
+                  <CoverArt id={release.id} />
+                  <hr></hr>
+                </>
+              );
+            })}
+          </div>
+        </div>
       ) : (
         ""
       )}

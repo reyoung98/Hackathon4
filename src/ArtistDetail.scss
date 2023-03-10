@@ -1,0 +1,34 @@
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.detail-info {
+  color: #b2b2b2;
+}
+
+.title {
+  font-size: 3.5rem;
+}
+
+.title-releases {
+  font-size: 2.5rem;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.releases {
+}
