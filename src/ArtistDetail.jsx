@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-<<<<<<< HEAD
 import "./ArtistDetail.scss";
-=======
-import CoverArt from './CoverArt'
->>>>>>> main
+import CoverArt from "./CoverArt";
 
 export default function ArtistDetail() {
   const [artist, setArtist] = useState();
@@ -38,7 +35,7 @@ export default function ArtistDetail() {
                   <p>
                     Release date :{release.date}, {release.country}
                   </p>
-                  <CoverArt id={release.id}/>
+                  <CoverArt id={release.id} />
                   <hr></hr>
                 </>
               );
