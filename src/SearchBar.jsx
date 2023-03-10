@@ -13,18 +13,20 @@ export default function SearchBar({ query, setQuery, setArtists }) {
     console.log(data.artists);
   };
 
-  const handleInput = (event) => {
-    const result = event.target.value;
-    setQuery(result);
-  };
+    const handleInput = (event) => {
+        const result = event.target.value;
+        if (result !== '') {
+            setQuery(result);
+        }
+    };
 
-  useEffect(() => {
-    fetchData();
-  }, [query]);
+    useEffect(() => {
+        fetchData();
+    }, [query]);
 
-  return (
-    <div className="search-container">
-      <input className="searchBox" type="text" onChange={handleInput} />
-    </div>
-  );
+    return (
+        <div className="search-container">
+            <input className="searchBox" type="text" onChange={handleInput} placeholder="Search for an artist..." />
+        </div>
+    )
 }
