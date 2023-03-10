@@ -1,9 +1,11 @@
-import './Navbar.scss'
+import "./Navbar.scss";
+import logo from "./sound-img.png";
 
-export default function Navbar () {
-    return (
-        <nav>
-            <a href="/">Artist Database</a>
-        </nav>
-    )
+export default function Navbar() {
+  return (
+    <nav>
+      <img className="logo" src={logo} alt=""></img>
+      <a href="/">Soundify</a>
+    </nav>
+  );
 }
