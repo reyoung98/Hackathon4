@@ -3,6 +3,13 @@
     flex-flow: row wrap;
 }
 
+.avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #03dac6;
+}
+
 .artist-card {
     flex-basis: 200px;
     padding: 2rem;
@@ -14,7 +21,9 @@
     color: #bb86fc;
 
     &:hover {
-        color: #03dac6;
+        .artist-name {
+            color: #03dac6;
+        }
     }
 
     .artist-name {

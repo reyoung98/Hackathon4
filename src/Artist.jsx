@@ -6,8 +6,11 @@ export default function Artist({ artists }) {
             { artists.map((artist) => {
                 return (
                     <a href={`/artist/${artist.id}`} className="artist-card" key={artist.id}>
+                        {/* <div className="avatar"></div> */}
                         <div className="artist-name">{artist.name}</div>
-                        <div className="artist-name">{artist.country}</div>
+                        <div className="artist-country">{artist.country}</div>
+                        <div className="artist-disambiguation">{artist.disambiguation}</div>
+                        {/* <div className="artist-name">{artist.tags[0].name}</div> */}
                     </a>
                 )
             }
