@@ -17,6 +17,8 @@ export default function SearchBar({ query, setQuery, setArtists }) {
         const result = event.target.value;
         if (result !== '') {
             setQuery(result);
+        } else {
+            setQuery("band")
         }
     };
 
