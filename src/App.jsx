@@ -1,6 +1,9 @@
 import { useState } from "react";
-import "./App.css";
+import "./App.scss";
 import Homepage from "./Homepage";
+import Navbar from "./Navbar";
+import ArtistDetail from "./ArtistDetail";
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
   const [artists, setArtists] = useState([]);
@@ -8,12 +11,21 @@ function App() {
 
   return (
     <div className="App">
-      <Homepage
-        artists={artists}
-        query={query}
-        setQuery={setQuery}
-        setArtists={setArtists}
-      />
+      <BrowserRouter>
+      <Navbar />
+
+      <Routes>
+        <Route path="/"
+          element={<Homepage artists={artists}
+          query={query}
+          setQuery={setQuery}
+          setArtists={setArtists}/> } />
+        <Route path={`/artist/:id`}
+          element ={<ArtistDetail/>} />
+
+        </Routes>
+    
+      </BrowserRouter>
     </div>
   );
 }
