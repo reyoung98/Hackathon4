@@ -15,7 +15,9 @@ export default function SearchBar({ query, setQuery, setArtists }) {
 
     const handleInput = (event) => {
         const result = event.target.value;
-        setQuery(result);
+        if (result !== '') {
+            setQuery(result);
+        }
     };
 
     useEffect(() => {
@@ -24,7 +26,7 @@ export default function SearchBar({ query, setQuery, setArtists }) {
 
     return (
         <div className="search-container">
-            <input className="searchBox" type="text" onChange={handleInput} />
+            <input className="searchBox" type="text" onChange={handleInput} placeholder="Search for an artist..." />
         </div>
     )
 
