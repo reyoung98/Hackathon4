@@ -27,10 +27,23 @@
         }
         border: 2px solid #03dac6;
     }
+    flex-basis: 200px;
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 3px;
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    background-color: #191c22;
+    color: #bb86fc;
+    border: 2px solid transparent;
 
-    .artist-name {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+    &:hover {
+        .artist-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #03dac6;
+        }
+        border: 2px solid #03dac6;
     }
 
     .artist-disambiguation {
@@ -60,5 +73,19 @@
         padding: 4px;
         border-radius: 7px;
         margin: 4px;
+    }
+    .artist-name {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .artist-disambiguation {
+        color: magenta;
+        margin-bottom: 0.5rem;
+    }
+
+    .artist-aliases {
+        color: white;
+        font-size: 0.8rem;
     }
 }

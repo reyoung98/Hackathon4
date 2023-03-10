@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Searchbar.scss";
+// import "./Searchbar.scss";
 
 export default function SearchBar({ query, setQuery, setArtists }) {
   const fetchData = async () => {
@@ -15,8 +15,10 @@ export default function SearchBar({ query, setQuery, setArtists }) {
 
   const handleInput = (event) => {
     const result = event.target.value;
-    if (result !== '') {
+    if (result !== "") {
       setQuery(result);
+    } else {
+      setQuery("band");
     }
   };
 
@@ -26,7 +28,12 @@ export default function SearchBar({ query, setQuery, setArtists }) {
 
   return (
     <div className="search-container">
-      <input className="searchBox" type="text" onChange={handleInput} placeholder="Search for an artist..." />
+      <input
+        className="searchBox"
+        type="text"
+        onChange={handleInput}
+        placeholder="Search for an artist..."
+      />
     </div>
-  )
+  );
 }

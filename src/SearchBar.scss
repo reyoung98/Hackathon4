@@ -1,12 +1,12 @@
 .search-container {
-    padding: 2rem;
-    
-    .searchBox {
-        padding: .5rem;
-        width: 300px;
-        background-color: #2e3440;
-        color: white;
-        border-radius: 5px;
-        border: 0;
-    }
+  .searchBox {
+    margin: 2rem 5rem;
+    padding: 0.5rem;
+    width: 250px;
+    height: 1.5rem;
+    background-color: white;
+    color: #2e3440;
+    border-radius: 28px;
+    border: none;
+  }
 }
