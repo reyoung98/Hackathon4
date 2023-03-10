@@ -1,46 +1,45 @@
 .artists {
-    display: flex;
-    flex-flow: row wrap;
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .avatar {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #03dac6;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #03dac6;
 }
 
 .artist-card {
-    flex-basis: 200px;
-    padding: 2rem;
-    margin: 1rem;
-    border-radius: 3px;
-    box-shadow: 0 .2rem .5rem rgba(0,0,0,.2);
-    text-decoration: none;
-    background-color: #191c22;
-    color: #bb86fc;
-    border: 2px solid transparent;
+  flex-basis: 200px;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  background-color: #191c22;
+  color: #bb86fc;
+  border: 2px solid transparent;
 
-    &:hover {
-        .artist-name {
-            color: #03dac6;
-        }
-        border: 2px solid #03dac6;
-    }
-
+  &:hover {
     .artist-name {
-        font-size: 1.2rem;
-        margin-bottom: .5rem;
+      color: #03dac6;
     }
+    border: 2px solid #03dac6;
+  }
 
-    .artist-disambiguation {
-        color: magenta;
-        margin-bottom: .5rem;
-    }
+  .artist-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
 
-    .artist-aliases {
-        color: white;
-        font-size: .8rem;
-    }
+  .artist-disambiguation {
+    color: magenta;
+    margin-bottom: 0.5rem;
+  }
 
+  .artist-aliases {
+    color: white;
+    font-size: 0.8rem;
+  }
 }
