@@ -1,5 +1,5 @@
-export default function Artist() {
-    return (
-        <h1>Artist name</h1>
-    )
+export default function Artist({ artists }) {
+  return artists.map((artist) => {
+    return <li>{artist.name}</li>;
+  });
 }
