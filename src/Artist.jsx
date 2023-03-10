@@ -10,11 +10,15 @@ export default function Artist({ artists }) {
                         <div className="artist-name">{artist.name}</div>
                         {/* <div className="artist-country">{artist.country}</div> */}
                         <div className="artist-disambiguation">{artist.disambiguation}</div>
-                        <div className="artist-aliases">Aliases: {artist.aliases.map(alias => alias.name).join(", ")}</div>
+                        {artist.aliases && (
+                            <div className="artist-aliases">
+                                Aliases: {artist.aliases.map(alias => alias.name).join(", ")}
+                            </div>
+                        )}
                     </a>
                 )
             }
             )}
-        </div> 
+        </div>
     )
 }
