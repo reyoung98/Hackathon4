@@ -15,7 +15,7 @@
     padding: 2rem;
     margin: 1rem;
     border-radius: 3px;
-    box-shadow: 0 .2rem .5rem rgba(0,0,0,.2);
+    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.2);
     text-decoration: none;
     background-color: #191c22;
     color: #bb86fc;
@@ -30,17 +30,35 @@
 
     .artist-name {
         font-size: 1.2rem;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
 
     .artist-disambiguation {
         color: magenta;
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
 
     .artist-aliases {
         color: white;
-        font-size: .8rem;
+        font-size: 0.8rem;
     }
-
+    .genre-container {
+        flex: 1;
+        font-size: 13px;
+        flex-direction: row;
+        display: flex;
+        color: magenta;
+        margin-block: 2px;
+        margin-top: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .genre {
+        border: magenta 2px solid;
+        margin-right: 0.5rem;
+        width: fit-content;
+        padding: 4px;
+        border-radius: 7px;
+        margin: 4px;
+    }
 }
