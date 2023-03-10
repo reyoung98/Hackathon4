@@ -1,8 +1,21 @@
+.artists {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .artist-card {
+    flex-basis: 200px;
     padding: 2rem;
     margin: 1rem;
     border-radius: 3px;
     box-shadow: 0 .2rem .5rem rgba(0,0,0,.2);
+    text-decoration: none;
+    background-color: #121212;
+    color: #bb86fc;
+
+    &:hover {
+        color: #03dac6;
+    }
 
     .artist-name {
         font-size: 1.2rem;
