@@ -16,7 +16,7 @@ export default function Artist({ artists }) {
                                 Aliases: {artist.aliases.map(alias => alias.name).join(", ")}
                             </div>
                         )}
-                        <Genre id={artist.id} />
+                        {/* <Genre id={artist.id} /> */}
                     </a>
                 )
             }

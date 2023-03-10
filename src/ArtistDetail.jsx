@@ -26,13 +26,13 @@ export default function ArtistDetail() {
       {artist ? (
         <div className="detail-info">
           <h1 className="title">{artist.name}</h1>
-          <Genre id={id} />
+          {/* <Genre id={id} /> */}
           <div className="releases">
             <h1 className="title-releases">Releases</h1>
             {artist.releases.map((release) => {
               console.log(release);
               return (
-                <div className="info-container">
+                <div className="info-container" key={release.id}>
                   <h2>{release.title}</h2>
                   <p>
                     Release date: {release.date}, {release.country}

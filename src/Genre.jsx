@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 
-
-
 export const Genre = ({ id }) => {
     const [genres, setGenres] = useState([]);
 
@@ -21,7 +19,7 @@ export const Genre = ({ id }) => {
         <div>
             { genres && (
                 <div className="genre-container">{genres.map((genre) => {
-                    return <div className="genre">{genre.name}</div>
+                    return <div className="genre" key={genre.name}>{genre.name}</div>
                 })}
                 </div>
             ) }
