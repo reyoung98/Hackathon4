@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import CoverArt from './CoverArt'
 
 export default function ArtistDetail() {
   const [artist, setArtist] = useState();
@@ -32,7 +33,7 @@ export default function ArtistDetail() {
                   <strong>{release.title}</strong>, {release.date},{" "}
                   {release.country}
                 </p>
-                <p></p>
+                <CoverArt id={release.id}/>
               </>
             );
           })}
