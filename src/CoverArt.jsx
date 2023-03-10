@@ -1,23 +1,37 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import "./ArtistDetail.scss";
 
-export default function CoverArt({id}) {
+export default function CoverArt({ id }) {
+  const [imageUrl, setImageUrl] = useState("");
+  const [imageError, setImageError] = useState(false);
 
-    const [imageUrl, setImageUrl] = useState('')
+  const getImage = async () => {
+    const response = await fetch(
+      `https://coverartarchive.org/release/${id}/front`
+    );
+    const data = await response;
 
-    const getImage = async () => {
-        const response = await fetch(`https://coverartarchive.org/release/${id}/front`)
-        const data = await response;
+    console.log(data.url);
+    setImageUrl(data.url);
+  };
 
-        console.log(data.url)
-        setImageUrl(data.url)
-    }
+  useEffect(() => {
+    getImage();
+  }, []);
 
-    useEffect(()=> {
-        getImage()
-    }, [])
+  //       <img className="release-img" src={imageUrl} />
 
-    return (
-        <img src={imageUrl}/>
-    )
+  const handleError = () => {
+    setImageError(ture);
+  };
+
+  return (
+    <div>
+      {imageError ? (
+        <p>failed to load</p>
+      ) : (
+        <img className="release-img" src={imageUrl} onError={handleError} />
+      )}
+    </div>
+  );
 }
-

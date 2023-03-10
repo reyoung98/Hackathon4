@@ -30,14 +30,14 @@ export default function ArtistDetail() {
             {artist.releases.map((release) => {
               console.log(release);
               return (
-                <>
+                <div className="info-container">
                   <h2>{release.title}</h2>
                   <p>
-                    Release date :{release.date}, {release.country}
+                    Release date: {release.date}, {release.country}
                   </p>
-                  <CoverArt id={release.id} />
+                  <CoverArt id={release.id} /> <br></br>
                   <hr></hr>
-                </>
+                </div>
               );
             })}
           </div>

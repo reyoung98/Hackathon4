@@ -10,8 +10,11 @@
   color: #b2b2b2;
 }
 
+.info-container {
+}
+
 .title {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .title-releases {
@@ -27,8 +30,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  width: 35%;
 }
 
-.releases {
+.release-img {
+  width: 90%;
 }
