@@ -19,10 +19,12 @@ export const Genre = ({ id }) => {
 
     return (
         <div>
-            <div className="genre-container">{genres.map((genre) => {
-                return <div className="genre">{genre.name}</div>
-            })}
-            </div>
+            { genres && (
+                <div className="genre-container">{genres.map((genre) => {
+                    return <div className="genre">{genre.name}</div>
+                })}
+                </div>
+            ) }
         </div>
     )
 }
